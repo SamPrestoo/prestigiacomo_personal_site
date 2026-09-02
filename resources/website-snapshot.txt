@@ -1,0 +1,103 @@
+PERSONAL WEBSITE SNAPSHOT / BUILD BRIEF
+============================================================
+Companion files: experience.txt, projects.txt (final site copy lives there;
+anything in [brackets] in those files is an unresolved note, not copy)
+
+
+PURPOSE
+------------------------------------------------------------
+Personal portfolio website for Presto, a Cybersecurity Engineering student
+at the University of Kansas (previously Computer Science). The site exists
+for one audience: employers reviewing applications for security and
+AI/software roles starting next year.
+
+Design for two reading modes:
+1. The 30-60 second skim. A recruiter clicking through from a resume or
+   LinkedIn should immediately see: what was built, what it was built with,
+   and what happened. Titles, stack lines, and highlight bullets carry this
+   layer.
+2. The deep dive. An interested engineer or hiring manager should find
+   full retrospectives, architecture explanations, and lessons learned
+   without the skim layer getting longer. Deep dives sit below the fold or
+   behind expand/collapse per entry.
+
+The site mirrors the resume's mental model (professional summary, work
+experience, education, certifications) so someone bouncing between resume
+and site never has to re-sort the information. Experience and Projects are
+separate pages, never merged.
+
+
+PAGES
+------------------------------------------------------------
+
+HOME
+- Name, one-line identity (cybersecurity engineering student, builder,
+  founder), and location-agnostic framing
+- Three highlight cards linking deeper: ACS internship, TimelineTL,
+  PrestoPi security lab. These are the three strongest assets and should
+  be visible without scrolling
+- Prominent resume download button (PDF, one page)
+- Simple nav: Home / Experience / Projects / About / Contact
+
+EXPERIENCE
+- Content comes verbatim from experience.txt
+- Order: ACS first, TimelineTL second (matches resume order)
+- Each entry: title block, one-liner, stack & skills line, highlight
+  bullets, then collapsible deep dive
+- Stack keywords should be visually scannable (badges, chips, or bold),
+  since frameworks/languages/skills are what screeners search for
+
+PROJECTS
+- Content comes verbatim from projects.txt
+- Order is intentional and must be preserved: PrestoPi security lab first,
+  then Kalshi trading bot, AI chatbot, ecommerce site, local business site.
+  Ordered by relevance to target roles, not chronology
+- Same entry template as Experience for consistency
+- PrestoPi entry should support an architecture diagram and/or Grafana
+  dashboard screenshots when provided later
+
+ABOUT
+- Short. A few paragraphs, not a life story
+- Covers: self-taught origin (started with a full-stack web dev course and
+  a notebook before any formal coursework), the switch from CS to
+  Cybersecurity Engineering and why, and the throughline: went from
+  AI-assisted building at speed to building from fundamentals in security
+- One line on deployment breadth: has shipped on Render, shared PHP/MySQL
+  hosting, the iOS App Store, and self-hosted infrastructure on a
+  Raspberry Pi
+- Certifications mentioned here or in a small sidebar: Google
+  Cybersecurity Certificate
+
+CONTACT
+- Email, LinkedIn, GitHub. App Store link for TimelineTL if kept live
+- Keep it static and simple, no contact form or backend needed
+
+FUTURE (do not build yet, just leave room in the structure)
+- Possible Coursework page: security coursework detail that doesn't fit
+  the one-page resume (mobile security, information security, exploit
+  labs). Nav should be able to grow by one item without redesign
+
+
+VOICE AND CONTENT RULES
+------------------------------------------------------------
+- Casual and direct. Short sentences. No corporate filler
+- No em dashes anywhere in site copy
+- Bios avoid first-person "I" (fragment style: "Cybersecurity engineering
+  student at KU. Founder of TimelineTL." etc.)
+- No self-deprecation. Honesty about lessons learned is a feature, but it
+  lives inside deep dives as reflection, never in headlines or openers
+- Every claim should be defensible in an interview. Nothing overstated
+  (e.g. ACS entry says "integrating with an Azure endpoint," not "built on
+  Azure"; keep that precision when adapting copy)
+- Keywords matter: frameworks, languages, and tools should appear in
+  plain text (not only images) so both ATS scrapers and humans catch them
+
+
+TECHNICAL PREFERENCES
+------------------------------------------------------------
+- Static site, fast, mobile-friendly. No backend required
+- Clean and readable over flashy. The content is the product
+- Expand/collapse for deep dives should work without JavaScript breaking
+  the content (progressive enhancement: content still visible/indexable)
+- Easy to update: adding a project or experience entry should mean editing
+  one content block, not touching layout code

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Sam Prestigiacomo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">Sam Prestigiacomo</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Experience</h1>
+    </div>
+
+    <!-- ACS -->
+    <article class="entry" id="acs">
+      <div class="entry-title-row">
+        <div class="entry-title">Software Engineer Intern (AI Development)</div>
+      </div>
+      <div class="entry-org">ACS (Affiliated Construction Services)</div>
+      <div class="entry-meta">May 2025 - March 2026 | Verona, WI | Full-time (summer), part-time remote (academic year)</div>
+      <p class="entry-summary">Developed an LLM-powered assistant supporting internal teams and external partners with project-specific inquiries, code and script generation, and contextual guidance.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Azure Government Cloud</span>
+        <span class="badge">Hugging Face</span>
+        <span class="badge">Ollama</span>
+        <span class="badge">RAG pipelines</span>
+        <span class="badge">Embeddings</span>
+        <span class="badge">Prompt engineering</span>
+        <span class="badge">Structured outputs</span>
+        <span class="badge">Agentic system design</span>
+        <span class="badge">Model quantization</span>
+      </div>
+      <ul class="highlights">
+        <li>Built end-to-end LLM application features within a cross-functional professional team, integrating with the company's Azure Government Cloud model endpoint</li>
+        <li>Designed agentic components using embeddings, RAG pipelines, and NLP techniques</li>
+        <li>Led prompt engineering and system design work to improve the assistant's accuracy, scalability, and adaptability</li>
+        <li>Studied and applied model internals: tokenization, transformer architectures, fine-tuning, alignment, and optimization techniques including quantization and compression</li>
+      </ul>
+      <details>
+        <summary>Deep dive: Reliable structured output</summary>
+        <div class="details-body">
+          <p>The assistant needed to generate syntactically correct DSL commands. Early iterations validated model output with regex, which broke down on commands with variable-length or customizable inputs that patterns could not fully capture.</p>
+          <p>The solution was designing structured output formats that constrain the model's generation space at inference time, enforcing schema compliance up front instead of patching malformed output after the fact. The result was a major improvement in parse reliability and a clean separation between the generation and execution layers.</p>
+        </div>
+      </details>
+    </article>
+
+    <!-- TimelineTL -->
+    <article class="entry" id="timelinetl">
+      <div class="entry-title-row">
+        <div class="entry-title">Founder &amp; CEO</div>
+      </div>
+      <div class="entry-org">TimelineTL</div>
+      <div class="entry-meta">April 2024 - March 2026</div>
+      <p class="entry-summary">Professional networking iOS app built for students and early-career builders - a space to show growing skills without competing against people already settled into their careers. Launched on the App Store February 7, 2025.</p>
+      <div class="badges">
+        <span class="badge">Swift (iOS)</span>
+        <span class="badge">PHP</span>
+        <span class="badge">MySQL</span>
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Bluehost</span>
+        <span class="badge">Git</span>
+        <span class="badge">Sourcetree</span>
+        <span class="badge">Team leadership</span>
+        <span class="badge">Product strategy</span>
+      </div>
+      <ul class="highlights">
+        <li>Took the product from web prototype to a shipped App Store launch across two years and 600+ hours of development</li>
+        <li>Hired and managed two developers: wrote onboarding and architecture documentation, set up the shared development environment, and ran weekly standups</li>
+        <li>Problem discovery research, built on surveys across multiple generations about professional networking platforms, placed top ten in a University of Kansas competition and won a $1,250 grant</li>
+        <li>Personally funded and operated the startup end to end, owning product strategy, hiring, and technical direction</li>
+        <li>Grew to 50+ users entirely through word of mouth, with zero marketing spend</li>
+      </ul>
+      <details>
+        <summary>Deep dive: The retrospective</summary>
+        <div class="details-body">
+          <p>TimelineTL started as a 48-hour hackathon project and turned into two years of work: first a PHP/MySQL web platform on shared hosting, then a native Swift iOS app carrying over the web version's backend. The idea: LinkedIn is built for people who already made it. Students building their skills need a place to share progress without feeling like everyone in the room is above them.</p>
+          <p>Early versions were built heavily with AI assistance, including in Swift, a language completely foreign at the time. It was fast, but it produced duplicate functions, dead code, and an architecture nobody fully understood, including the AI tools themselves. Onboarding two developers onto that codebase forced a shift into a leadership role: writing documentation, standardizing the dev environment, and running standups. It taught more about maintainability, documentation, and code review than any course. AI can generate code, but it cannot own a codebase. Someone has to.</p>
+          <p>The project was sunset in March 2026. The role had drifted from developer to CEO, the learning had shifted almost entirely to the business side, and the pace of AI progress made it clear the platform could soon be rebuilt in a fraction of the time. The 600+ hours and personal investment were never a regret. They bought lessons that now shape everything else on this site, starting with the decision to build from fundamentals in security engineering.</p>
+        </div>
+      </details>
+    </article>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

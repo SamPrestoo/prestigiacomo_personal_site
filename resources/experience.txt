@@ -1,0 +1,106 @@
+EXPERIENCE
+============================================================
+
+[Structure note: each entry has a skim layer (title, one-liner, stack, highlights)
+followed by a deep dive. On the site, the deep dive should be collapsible or
+below the fold. Anything in brackets is a note from Claude, not site copy.]
+
+
+------------------------------------------------------------
+SOFTWARE ENGINEER INTERN (AI DEVELOPMENT)
+ACS (Affiliated Construction Services), Verona, WI
+May 2025 - March 2026 | Full-time (summer), part-time remote (academic year)
+------------------------------------------------------------
+
+Developed an LLM-powered assistant supporting internal teams and external
+partners with project-specific inquiries, code and script generation, and
+contextual guidance.
+
+Stack & skills: Python, Azure Government Cloud (endpoint integration),
+Hugging Face, Ollama, RAG pipelines, embeddings, prompt engineering,
+structured outputs, agentic system design, model quantization and
+compression
+
+Highlights:
+- Built end-to-end LLM application features within a cross-functional
+  professional team, integrating with the company's Azure Government
+  Cloud model endpoint
+- Designed agentic components using embeddings, RAG pipelines, and NLP
+  techniques
+- Led prompt engineering and system design work to improve the assistant's
+  accuracy, scalability, and adaptability
+- Studied and applied model internals: tokenization, transformer
+  architectures, fine-tuning, alignment, and optimization techniques
+  including quantization and compression
+
+DEEP DIVE: Reliable structured output
+The assistant needed to generate syntactically correct DSL commands. Early
+iterations validated model output with regex, which broke down on commands
+with variable-length or customizable inputs that patterns could not fully
+capture. The solution was designing structured output formats that constrain
+the model's generation space at inference time, enforcing schema compliance
+up front instead of patching malformed output after the fact. The result was
+a major improvement in parse reliability and a clean separation between the
+generation and execution layers.
+
+[VERIFY before publishing: (1) confirm you are comfortable describing the
+DSL work publicly since it was internal, (2) confirm the title matches your
+resume exactly.]
+
+
+------------------------------------------------------------
+FOUNDER & CEO
+TimelineTL
+April 2024 - March 2026
+------------------------------------------------------------
+
+Professional networking iOS app built for students and early-career builders,
+a space to show growing skills without competing against people already
+settled into their careers. Launched on the App Store February 7, 2025.
+
+Stack & skills: Swift (iOS), PHP, MySQL, HTML/CSS/JavaScript (web version),
+Bluehost deployment, Git collaboration via Sourcetree, team leadership,
+product strategy, technical documentation
+
+Highlights:
+- Took the product from web prototype to a shipped App Store launch across
+  two years and 600+ hours of development
+- Hired and managed two developers: wrote onboarding and architecture
+  documentation, set up the shared development environment, and ran weekly
+  standups
+- Problem discovery research, built on surveys across multiple generations
+  about professional networking platforms, placed top ten in a University of
+  Kansas competition and won a $1,250 grant
+- Personally funded and operated the startup end to end, owning product
+  strategy, hiring, and technical direction
+- Grew to 50+ users entirely through word of mouth, with zero marketing
+  spend
+
+DEEP DIVE: The retrospective
+TimelineTL started as a 48-hour hackathon project and turned into two years
+of work: first a PHP/MySQL web platform on shared hosting, then a native
+Swift iOS app carrying over the web version's backend. The idea: LinkedIn is built for people who already made it. Students
+building their skills need a place to share progress without feeling like
+everyone in the room is above them.
+
+Early versions were built heavily with AI assistance, including in Swift,
+a language completely foreign at the time. It was fast, but it produced
+duplicate functions, dead code, and an architecture nobody fully understood,
+including the AI tools themselves. Onboarding two developers onto that
+codebase forced a shift into a leadership role: writing documentation,
+standardizing the dev environment, and running standups. It taught more
+about maintainability, documentation, and code review than any course.
+AI can generate code, but it cannot own a codebase. Someone has to.
+
+The project was sunset in March 2026. The role had drifted from developer to
+CEO, the learning had shifted almost entirely to the business side, and the
+pace of AI progress made it clear the platform could soon be rebuilt in a
+fraction of the time. The 600+ hours and personal investment were never a
+regret. They bought lessons that now shape everything else on this site,
+starting with the decision to build from fundamentals in security
+engineering.
+
+[NOTE: I left the $3,500 expense figure out. Publishing the grant amount is
+normal, publishing your personal spend invites the "so it lost money"
+read. "Personally funded" carries the same weight without the number. Add
+it back if you disagree.]

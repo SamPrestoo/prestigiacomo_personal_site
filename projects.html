@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Sam Prestigiacomo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">Sam Prestigiacomo</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Projects</h1>
+    </div>
+
+    <!-- PrestoPi -->
+    <article class="entry" id="prestopi">
+      <div class="entry-title-row">
+        <div class="entry-title">PrestoPi: Home Network Security Lab</div>
+        <span class="badge badge-status">In progress</span>
+      </div>
+      <div class="entry-org">Personal project | Raspberry Pi 5</div>
+      <p class="entry-summary">Self-hosted network security monitoring stack built on a Raspberry Pi 5, applying coursework concepts against live traffic on a real network.</p>
+      <div class="badges">
+        <span class="badge">Raspberry Pi 5</span>
+        <span class="badge">Suricata</span>
+        <span class="badge">Promtail</span>
+        <span class="badge">Loki</span>
+        <span class="badge">Grafana</span>
+        <span class="badge">CrowdSec</span>
+        <span class="badge">Tailscale</span>
+        <span class="badge">LogQL</span>
+        <span class="badge">nftables</span>
+      </div>
+      <ul class="highlights">
+        <li>Building structured log review workflows: triaging Suricata alerts, tracing full network conversations by flow ID, and identifying beaconing patterns to separate normal background traffic from anomalies worth investigating</li>
+      </ul>
+      <details>
+        <summary>Deep dive: How it works and why this project</summary>
+        <div class="details-body">
+          <h4>How it works</h4>
+          <p>Suricata runs as a network intrusion detection system (NIDS) in promiscuous mode on the Pi's ethernet interface, capturing every packet on the network via libpcap and writing structured EVE JSON logs. Promtail tails those logs and ships them to Loki, a label-indexed log database, where events are queryable with LogQL. CrowdSec analyzes the same logs against behavioral scenarios, enriches events with crowdsourced threat intelligence ratings, and enforces IP blocks through a firewall bouncer on nftables. Grafana sits on top as the visualization layer, with dashboards for DNS traffic analysis, Suricata alerts, and flow inspection. Remote administration runs over Tailscale.</p>
+          <h4>Why this project</h4>
+          <p>Cybersecurity grew out of developers writing better, more careful code - the complete opposite of the vibe-coded years before it. This lab is the pivot point: every component was configured by hand, validated end to end, and is understood down to the packet level. The most complex challenges are the most rewarding ones.</p>
+        </div>
+      </details>
+    </article>
+
+    <!-- Kalshi -->
+    <article class="entry" id="kalshi">
+      <div class="entry-title-row">
+        <div class="entry-title">Kalshi Soccer Trading Bot</div>
+      </div>
+      <div class="entry-org">HackKU 2026</div>
+      <p class="entry-summary">Automated prediction market trading system for soccer matches on Kalshi, built and demoed in a hackathon weekend.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Kalshi API</span>
+        <span class="badge">XGBoost</span>
+        <span class="badge">Telegram Bot API</span>
+      </div>
+      <ul class="highlights">
+        <li>Modeled match outcomes with XGBoost using team research profiles, then traded against live Kalshi prediction markets based on configurable strategy parameters</li>
+        <li>Built a Telegram bot that pushed real-time trade signals and notifications, letting the system run unattended</li>
+      </ul>
+    </article>
+
+    <!-- AI Chatbot -->
+    <article class="entry" id="ai-chatbot">
+      <div class="entry-title-row">
+        <div class="entry-title">AI Mental Health Chatbot</div>
+      </div>
+      <div class="entry-org">Hackathon project | Frontend contributor</div>
+      <p class="entry-summary">Frontend contributor on a teammate's AI therapy chatbot concept. Built UI components for the conversational interface.</p>
+    </article>
+
+    <!-- Ecommerce -->
+    <article class="entry" id="ecommerce">
+      <div class="entry-title-row">
+        <div class="entry-title">Ecommerce Site with eBay Integration</div>
+      </div>
+      <div class="entry-org">Freelance</div>
+      <p class="entry-summary">Storefront for a client who sold through eBay and wanted a standalone web presence with accurate inventory.</p>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Render</span>
+      </div>
+      <ul class="highlights">
+        <li>Client's original ask - full two-way inventory sync between the site and eBay - was far outside the project budget. Scoped it down to linking directly to live eBay listings, keeping stock accurate at zero backend cost</li>
+        <li>Deployed on Render's free tier, keeping the client's only recurring expense to the domain itself</li>
+        <li>First project involving real client requirements, budget constraints, and scoping tradeoffs</li>
+        <li>Significant step up in design: custom animations and a stronger layout than anything built before it</li>
+      </ul>
+    </article>
+
+    <!-- Local Business -->
+    <article class="entry" id="local-business">
+      <div class="entry-title-row">
+        <div class="entry-title">Local Business Website</div>
+      </div>
+      <div class="entry-org">Freelance | First client project</div>
+      <p class="entry-summary">Informational website for a local business, handled solo across the full lifecycle.</p>
+      <div class="badges">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Render</span>
+      </div>
+      <ul class="highlights">
+        <li>First real-world project building software for someone else</li>
+        <li>Owned everything end to end: development, free-tier deployment on Render, domain registration and DNS configuration, and on-page SEO to improve local search ranking - with the domain as the only expense</li>
+        <li>Ran in production for two years</li>
+      </ul>
+    </article>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+PROJECTS
+============================================================
+
+[Structure note: ordered by relevance to the roles you're targeting, not
+chronology. Security lab first, oldest freelance work last. Same skim layer
+plus deep dive pattern as the experience page. Brackets are notes from
+Claude, not site copy.]
+
+
+------------------------------------------------------------
+PRESTOPI: HOME NETWORK SECURITY LAB
+Raspberry Pi 5 | In progress
+------------------------------------------------------------
+
+Self-hosted network security monitoring stack built on a Raspberry Pi 5,
+applying coursework concepts against live traffic on a real network.
+
+Stack: Raspberry Pi 5 (Raspberry Pi OS, Debian), Suricata, Promtail, Loki,
+Grafana, CrowdSec, Tailscale, LogQL, nftables
+
+How it works:
+Suricata runs as a network intrusion detection system (NIDS) in promiscuous
+mode on the Pi's ethernet interface, capturing every packet on the network
+via libpcap and writing structured EVE JSON logs. Promtail tails those logs
+and ships them to Loki, a label-indexed log database, where events are
+queryable with LogQL. CrowdSec analyzes the same logs against behavioral
+scenarios, enriches events with crowdsourced threat intelligence ratings,
+and enforces IP blocks through a firewall bouncer on nftables. Grafana sits
+on top as the visualization layer, with dashboards for DNS traffic analysis,
+Suricata alerts, and flow inspection. Remote administration runs over
+Tailscale.
+
+Current work:
+Building structured log review workflows: triaging Suricata alerts, tracing
+full network conversations by flow ID, and identifying beaconing patterns to
+separate normal background traffic from anomalies worth investigating.
+
+DEEP DIVE: Why this project
+Cybersecurity grew out of developers writing better, more careful code, the
+complete opposite of the vibe-coded years before it. This lab is the pivot
+point: every component was configured by hand, validated end to end, and is
+understood down to the packet level. The most complex challenges are the
+most rewarding ones.
+
+
+------------------------------------------------------------
+KALSHI SOCCER TRADING BOT
+HackKU 2026 hackathon
+------------------------------------------------------------
+
+Automated prediction market trading system for soccer matches on Kalshi,
+built and demoed in a hackathon weekend.
+
+Stack: Python, Kalshi API, XGBoost, Telegram Bot API
+
+- Modeled match outcomes with XGBoost using team research profiles, then
+  traded against live Kalshi prediction markets based on configurable
+  strategy parameters
+- Built a Telegram bot that pushed real-time trade signals and
+  notifications, letting the system run unattended
+- [VERIFY: confirm the XGBoost and team-profile details match what you
+  actually demoed, and whether it traded live money or paper]
+
+[NOTE: your original text undersold this one badly. "Fun weekend project"
+and "all vibe coded" got cut. An ML model trading real prediction markets
+with an alerting pipeline is a legitimately interesting project.]
+
+
+------------------------------------------------------------
+AI MENTAL HEALTH CHATBOT
+Hackathon project | Frontend contributor
+------------------------------------------------------------
+
+Frontend contributor on a teammate's AI therapy chatbot concept. Built UI
+components for the conversational interface.
+
+[NOTE: one entry, three lines, no apology. If you can name the frontend
+framework used, add it. If this entry feels too thin next to the others,
+it's also fine to cut it entirely.]
+
+
+------------------------------------------------------------
+ECOMMERCE SITE WITH EBAY INTEGRATION
+Freelance
+------------------------------------------------------------
+
+Storefront for a client who sold through eBay and wanted a standalone web
+presence with accurate inventory.
+
+Stack: HTML, CSS, JavaScript, custom CSS animations, responsive layout,
+Render (free-tier deployment)
+
+- Client's original ask, full two-way inventory sync between the site and
+  eBay, was far outside the project budget. Scoped it down to linking
+  directly to live eBay listings, keeping stock accurate at zero backend
+  cost
+- Deployed on Render's free tier, keeping the client's only recurring
+  expense to the domain itself
+- First project involving real client requirements, budget constraints, and
+  scoping tradeoffs
+- Significant step up in design: custom animations and a stronger layout
+  than anything built before it
+
+
+------------------------------------------------------------
+LOCAL BUSINESS WEBSITE
+Freelance | First client project
+------------------------------------------------------------
+
+Informational website for a local business, handled solo across the full
+lifecycle.
+
+Stack: HTML, CSS, JavaScript, Render (free-tier deployment)
+
+- First real-world project building software for someone else
+- Owned everything end to end: development, free-tier deployment on Render,
+  domain registration and DNS configuration, and on-page SEO to improve
+  local search ranking, with the domain as the only expense
+- Ran in production for two years
+
+
+------------------------------------------------------------
+[CUT FROM THIS PAGE: the Udemy course. It belongs in your About section as
+one or two lines, something like: "Self-taught web development before any
+formal coursework, one full-stack course and a notebook covering everything
+from the HTML skeleton to JS events, still on the shelf." A course is not a
+project, and leading with it anchors you as a beginner.]
