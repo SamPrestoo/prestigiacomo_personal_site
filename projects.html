@@ -25,6 +25,35 @@
       <h1>Projects</h1>
     </div>
 
+
+
+  <!-- DigiWallet -->
+  <article class="entry" id="digiwallet">
+    <div class="entry-title-row">
+      <div class="entry-title">DigiWallet: Encrypted Password and Card Manager</div>
+      <span class="badge badge-status">In progress</span>
+    </div>
+    <div class="entry-org">EECS 581 team project | University of Kansas</div>
+    <p class="entry-summary">Desktop password manager and digital wallet in C++. Built the card manager plus the crypto, key management, and storage layers it sits on.</p>
+    <div class="badges">
+      <span class="badge">C++17</span>
+      <span class="badge">OpenSSL 3</span>
+      <span class="badge">AES-256-GCM</span>
+      <span class="badge">scrypt</span>
+      <span class="badge">HKDF-SHA256</span>
+      <span class="badge">FLTK</span>
+      <span class="badge">POSIX</span>
+    </div>
+    <ul class="highlights">
+      <li>Two-step key hierarchy: scrypt (memory-hard KDF) turns the master password into a master key once per unlock, then HKDF derives a fresh per-file key from a new random salt on every save</li>
+      <li>Every file sealed with AES-256-GCM (AEAD): new 12-byte nonce per save, 16-byte authentication tag checked before any data is released, and the file header, salt, and filename bound in as AAD so edited or swapped files get rejected</li>
+      <li>OpenSSL (EVP) kept as the only crypto dependency to limit attack surface, with the implementation validated against published test vectors (RFC 7914, RFC 5869, NIST GCM)</li>
+      <li>Hardening beyond encryption: secrets wiped from memory on lock, atomic writes with fsync, owner-only file permissions, and authenticated scrypt parameters so a tampered vault can't downgrade them. Card numbers Luhn-checked, CVVs never stored</li>
+    </ul>
+  </article>
+
+    
+
     <!-- PrestoPi -->
     <article class="entry" id="prestopi">
       <div class="entry-title-row">
